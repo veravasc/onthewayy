@@ -1,0 +1,920 @@
+/* CSS Document */
+@media all {}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, b, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: normal;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* .fundo {
+  height: auto;
+  background-color: yellow;
+  animation-name: fundo;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+}
+@keyframes fundo {
+  0% {
+    background-color: #FF009F
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: #00FF0E;
+  }
+  75% {
+    background-color: #00F0FF;
+  }
+  100% {
+    background-color: #FF009F;
+  }
+} */
+/*//////////////////////////////////////////////////// */ :root {
+  --top: 2vh;
+}
+/* ON LOAD */
+html {
+  background-color: #b8b6b1;
+  font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+/* DEFAULT */
+#intro {
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#registerpage, #loginpage, #mainpage, #aboutpage, #quizpage, #personalpage, #bg-circles {
+  display: none;
+}
+header {
+  display: none;
+  width: 100vw;
+  height: auto;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#registerpage, #loginpage, #mainpage, #records, #quizpage, #personalpage, #aboutpage, #bg-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* sections titles */
+.pagetitle {
+  margin: 0;
+  padding: 0;
+  margin-top: 3px;
+  margin-bottom: 1.2em;
+  font-size: 25pt;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  text-align: center;
+}
+/*//////////////////////////////////////////////////// */
+/*WELCOME*/
+h1 {
+  font-size: 5vw;
+  text-decoration: underline;
+  line-height: 1.5em;
+  color: white;
+  text-align: center;
+  margin-top: 1.5%;
+  margin-bottom: 5.2%;
+}
+button {
+  background: none;
+  border: solid white 3px;
+  border-radius: 50px;
+}
+button:hover {
+  background: #D7D7D7;
+  border: none;
+}
+#btns {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10%;
+  margin-top: 10%;
+}
+#btnstart {
+  border-radius: 50px;
+  margin-bottom: 15%;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+}
+#btnstart:hover {
+  background: #CCCCCC;
+  border: none;
+}
+#btnregister {
+  border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+}
+#btnregister:hover {
+  background: #CCCCCC;
+  border: none;
+}
+#btnenter {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+  width: 30%;
+  margin-right: auto;
+  margin-left: 35%;
+}
+#btnenter:hover {
+  background: #CCCCCC;
+  border: none;
+}
+select {
+  font-family: 'Space Grotesk', sans-serif;
+  border: none;
+  border-radius: 50px;
+  width: 30%;
+  height: 80px;
+  font-size: 20pt;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#btnrecords {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -80px;
+  height: 80px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  cursor: pointer;
+  border: solid white 3px;
+  border-radius: 50px;
+}
+#btnrecords:hover {
+  background: #CCCCCC87;
+  border: none;
+}
+/*//////////////////////////////////////////////////// */
+/*PAG. INICIAL*/
+/*MENU*/
+#cabecalho {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+/* nav {
+    display: grid;
+    padding-top: 10px;
+} */
+/* USERNAME */
+#mainpage h2 {
+  font-size: 25pt;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  position: absolute;
+  margin-left: 45%;
+  margin-right: auto;
+  text-align: center;
+}
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: var(--top);
+  left: var(--top);
+  z-index: 1;
+}
+#menuToggle li {
+  text-decoration: none;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 30pt;
+  padding: 10px 0;
+}
+#menuToggle li:hover {
+  text-decoration: underline 3px;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+}
+/*HAMBURGUER*/
+#menu-box span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: white;
+  z-index: 1;
+  transform-origin: 4px 0px;
+}
+#menuToggle input:checked ~ #menu-box span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ #menu-box span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menu {
+  position: absolute;
+  width: 120vw;
+  height: 120vh;
+  box-sizing: border-box;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #b8b6b1;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+}
+/* fazer slide */
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+/*HAMBURGUER*/
+#menu-box span {
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background: white;
+}
+#records {
+  position: absolute;
+  top: 100vh;
+  transition: all .4s;
+  transition-timing-function: ease-out;
+}
+
+#mainpage {
+  overflow-y: scroll;
+}
+/*//////////////////////////////////////////////////// */
+/*REGISTER PAGE*/
+#registerpage {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.log_box {
+  background: #CCCCCC;
+  border: none;
+  border-radius: 50px;
+  height: 90px;
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 2.5%;
+}
+#savebtn {
+  border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+#savebtn:hover {
+  background: #CCCCCC;
+  border: none;
+}
+#nameinput {
+  font-size: 25pt;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding-top: 5px;
+}
+#ageinput {
+  font-size: 25pt;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding-top: 5px;
+}
+#jobinput {
+  font-size: 25pt;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  padding-top: 5px;
+}
+/* LOGIN PAGE */
+#loginpage {}
+.cabecas {
+  display: grid;
+  text-align: center;
+}
+
+h3 {
+  font-size: 25pt;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-left: 600px;
+}
+
+.text {
+  font-size: 16pt;
+  font-family: 'Space Grotesk', sans-serif;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-right: 40px;
+}
+
+#selectUser {
+  font-family: 'Inter', sans-serif;
+  border: none;
+  border-radius: 50px;
+  width: 35%;
+  height: 80px;
+  font-size: 20pt;
+  text-align: center;
+  margin-bottom: 5%;
+  display: flex;
+  margin-left: 32%;
+  margin-top: 13%;
+  background: #CCCCCC;
+  color: white;
+}
+
+#btnenter {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+  width: 25%;
+  margin-right: auto;
+  margin-left: 37%;
+}
+/*//////////////////////////////////////////////////// */
+/*RECORDS*/
+
+.view {
+  margin-left: 8%;
+  margin-bottom: 10%;
+}
+
+#daily-view, #weekly-view {
+  margin-right: 1%;
+}
+
+#records_day {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+  width: auto;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  overflow-y: visible;
+}
+.data {
+  font-size: 13pt;
+  color: white;
+  text-align: left;
+  padding-bottom: 1.5%;
+  margin-left: 18px;
+}
+.box {
+  background: #CCCCCC;
+  border: none;
+  border-radius: 20px;
+  height: 120px;
+}
+.entradas {
+  font-size: 15pt;
+  color: white;
+  text-align: left;
+  margin-left: 18px;
+  margin-top: 18px;
+}
+.espaco {
+  margin-top: 45px;
+}
+/*//////////////////////////////////////////////////// */
+/*PERSONAL SPACE*/
+#personalpage {
+  font-family: 'Inter', sans-serif;
+  color: white;
+  overflow-y: auto;
+}
+#personal_box {
+  background: rgba(201, 201, 201, 0.5);
+  border: none;
+  border-radius: 20px;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  height: fit-content;
+  width: 90%;
+  box-sizing: border-box;
+  padding: 2%;
+}
+[contenteditable="true"]:active, [contenteditable="true"]:focus {
+  border: none;
+  outline: none;
+}
+.placeholder {
+  margin-bottom: 2em;
+  line-height: 1.4;
+}
+.personal-entry {
+  word-break: break-word;
+  cursor: text;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.resultados {
+  width: 100%;
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  font-size: 13pt;
+  color: white;
+  text-align: left;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+.new-entry {
+  margin-bottom: 1em;
+  padding-top: 1em;
+  border-top: solid 1px lightgrey;
+  word-break: break-word;
+}
+.new-entry .p-date {
+  font-size: 10pt;
+}
+#save-box, #savebtnQuiz {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20pt;
+  color: white;
+  height: 80px;
+  cursor: pointer;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 14%;
+  margin-bottom: 1.5%;
+  border: solid white 3px;
+
+}
+#save-box:hover, #savebtnQuiz:hover {
+  background: #CCCCCC87;
+  border: none;
+}
+/*//////////////////////////////////////////////////// */
+/*QUIZ*/
+/* h5 {
+  font-size: 25pt;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-left: 615px;
+} */
+/* #bg-circles {
+  z-index: -5;
+} */
+
+#weekly-circles div {
+  position: fixed;
+  width: 10em;
+  height: 10em;
+  margin: -60px -100px 0px -75px;
+  border-radius: 70%;
+  filter: blur(1.7rem); /* Efeito de cor difusa */
+  opacity: 0.8;
+}
+
+#quizpage {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+.pergunta {
+  font-size: 15pt;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 1.5%;
+}
+/* .perguntas2 {
+  font-size: 15pt;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 2.8%;
+}
+.perguntas3 {
+  font-size: 15pt;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 2%;
+} */
+.box_respostas {
+  background: #CCCCCC87;
+  border: none;
+  border-radius: 50px;
+  min-height: 58px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding-right: 2em;
+}
+#box_describe {
+  background: #CCCCCC87;
+  border: none;
+  border-radius: 20px;
+  height: 100px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resultados_quiz {
+  font-size: 14pt;
+  color: white;
+  text-align: center;
+  padding-top: 34px;
+}
+.espaco_quiz {
+  margin-top: 65px;
+}
+/* textarea {
+  background: none;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 13pt;
+  font-family: 'Inter', sans-serif;
+  height: 20px;
+  width: 720px;
+  padding-top: 25px;
+} */
+
+#textareainput1, #textareainput2 {
+  word-break: break-word;
+  cursor: text;
+  display: inline-block;
+  width: 100%;
+  /* padding: 1.2em; */
+  padding-top: 0.8em;
+  padding-left: 1.2em;
+  padding-bottom: 0.8em;
+}
+.selectColor, .selectColor1, .selectColor2 {
+  position: relative;
+  top: 0;
+  outline: none;
+  background: #b8b6b1;
+  border: none;
+  border-radius: 50px;
+  width: 50%;
+  height: 58px;
+  font-size: 14pt;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.selectColor option, .selectColor1 option, .selectColor2 option {
+  background: #b8b6b1;
+}
+#section0, #section1, #section2 { 
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  width: 90em;
+  height: 35px;
+  display: flex;
+  margin-bottom: 40px;
+}
+.newRecord {
+  margin-bottom: 1.5em;
+}
+
+#selectHowAreYouFeeling, #selectHowDidYouSleep, #selectDidYouExercised {
+  background: #CCCCCC87;
+}
+
+/*//////////////////////////////////////////////////// */
+/*ABOUT*/
+#aboutpage {}
+/* h3 {
+  font-size: 25pt;
+  color: white;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-left:600px;
+} */
+.text_1 {
+  font-size: 14pt;
+  text-align: left;
+  justify-content: center;
+  line-height: 1.4;
+  margin-left: 46%;
+  margin-top: 5%;
+  display: flex;
+  margin-right: 15%;
+  color: white;
+}
+.text_2 {
+  font-size: 14pt;
+  text-align: left;
+  justify-content: center;
+  line-height: 1.4;
+  margin-left: 46%;
+  margin-top: 5%;
+  display: flex;
+  margin-right: 18%;
+  color: white;
+}
+.div, .div1, .div2 {
+  position: fixed;
+  width: 50em; /* Diâmetro do círculo */
+  height: 50em; /* Diâmetro do círculo */
+  margin: -60px -100px 0px -75px;
+  border-radius: 70%;
+  filter: blur(3rem); /* Efeito de cor difusa */
+  opacity: 0.8;
+}
+/*//////////////////////////////////////////////////// */
+/*RESPONSIVE*/
+@media only screen and (max-width:480px) {
+  h1 {
+    font-size: 10vw;
+    margin-top: 5%;
+    line-height: 50pt;
+    margin-bottom: 8%;
+  }
+  #btns {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30%;
+  }
+  #start {
+    margin-bottom: 13%;
+    font-size: 20pt;
+    height: 70px;
+  }
+  #register {
+    font-size: 20pt;
+    height: 70px;
+  }
+  /*//////////////////////////////////////////////////// */
+  /*PAG. INICIAL*/
+  #btnrecords {
+    height: 75px;
+    width: 75%;
+  }
+  #cabecalho {
+    margin-top: 15px;
+  }
+  #nome {
+    width: 0;
+  }
+  h2 {
+    font-size: 20pt;
+    margin-left: 135px;
+  }
+  /*//////////////////////////////////////////////////// */
+  /*REGISTER*/
+  .log_box {
+    width: 75%;
+    height: 80px;
+    margin-left: 12%;
+    margin-top: 5%;
+  }
+  #savebtn {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20pt;
+    color: white;
+    height: 80px;
+    cursor: pointer;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+  #nameinput {
+    font-size: 25pt;
+    color: white;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    padding-top: 5px;
+  }
+  /*ENTER*/
+  #selectUser {
+    width: 80%;
+    height: 80px;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-top: 32%;
+  }
+  #btnenter {
+    height: 80px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  /*ABOUT*/
+  h3 {
+    font-size: 20pt;
+    margin-left: 120px;
+    padding-top: 8px;
+  }
+  .text_1 {
+    font-size: 14pt;
+    text-align: center;
+    line-height: 1.4;
+    margin-left: 15%;
+    margin-top: 20%;
+    display: flex;
+    margin-right: 15%;
+  }
+  .text_2 {
+    font-size: 14pt;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.4;
+    margin-left: 15%;
+    margin-top: 9%;
+    margin-right: 15%;
+  }
+  /*RECORDS*/
+  #records_day {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 10%;
+    margin-top: 0;
+    width: auto;
+  }
+  .resultados {
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .data {
+    padding-bottom: 3%;
+  }
+  .espaco {
+    margin-top: 25px;
+  }
+  /*PERSONAL SPACE*/
+  h4 {
+    font-size: 20pt;
+    margin-left: 70px;
+    padding-top: 8px;
+  }
+  #personalpage {}
+  #personal_box {}
+  /*QUIZ*/
+
+  .perguntas1 {
+    font-size: 13pt;
+    margin-bottom: 4%;
+  }
+  .perguntas2 {
+    font-size: 13pt;
+    margin-bottom: 2.8%;
+  }
+  .perguntas3 {
+    font-size: 13pt;
+    margin-bottom: 2.8%;
+  }
+  .box_respostas {
+    width: 62%;
+    min-height: 50px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+  }
+  #box_describe {
+    background: #CCCCCC87;
+    border: none;
+    border-radius: 20px;
+    height: 90px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+  .resultados_quiz {
+    font-size: 14pt;
+    color: white;
+    text-align: center;
+    padding-top: 34px;
+  }
+/* textarea {
+    font-size: 13pt;
+    height: 20px;
+    width: 315px;
+    padding-top: 18px;
+  } */
+  .selectColor, .selectColor1, .selectColor2 {
+    width: 80%;
+    height: 50px;
+    font-size: 13pt;
+  }
+  #section0, #section1, #section2 {
+    width: 87%;
+    height: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    margin-top: 35px;
+  }
+  h5 {
+    margin-left: 130px;
+  }
+  #quizpage {
+    overflow-y: auto;
+  }
+  .perguntas {
+    margin-bottom: 9%;
+  }
+  .espaco_quiz {
+    margin-top: 35px;
+  }
+  .resultados_quiz {
+    padding-top: 28px;
+  }
+  .pagetitle {
+    margin-bottom: 1em;
+  }
+
+  /*//////////////////////////////////////////////////// */
+
+  /*PERSONAL SPACE*/
+    .placeholder {
+    margin-left: 5%;
+    margin-top: 5%;
+}
+    .daily-entry{
+        margin-left: 5%;
+    }
+
+    #save-box, #savebtnQuiz {
+  width: 50%;
+  margin-left: 25%;
+     height: 70px;
+}
+}
